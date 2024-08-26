@@ -1,0 +1,36 @@
+/Used the console to keep track of all the different totals
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <p id="text"></p>
+
+    <script>
+       
+       let textElement = document.querySelector('#text');
+
+
+let totalBill = prompt("What was your bill at the restaurant?");
+console.log("Initial Bill Amount: $" + totalBill);
+
+
+let taxedBill = totalBill * 1.07;
+console.log("Taxed Bill Amount: $" + taxedBill);
+
+
+let tipValue = taxedBill * 0.15;
+console.log("Tip Amount: $" + tipValue);
+
+
+let finalBill = taxedBill + tipValue;
+console.log("Final Bill Amount: $" + finalBill);
+
+textElement.textContent = ("Your final bill total is: $" + finalBill);
+    </script>
+</body>
+</html>
